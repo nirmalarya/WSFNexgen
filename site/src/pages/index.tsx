@@ -2,6 +2,8 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
 import { LoginButton } from "gatsby-theme-bayer-auth"
+import "../../styles/main.css"
+
 const pageStyles = {
 	color: "#232129",
 	padding: 96,
@@ -62,19 +64,6 @@ const descriptionStyle = {
 	lineHeight: 1.25,
 }
 
-const docLinks = [
-	{
-		text: "TypeScript Documentation",
-		url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-		color: "#8954A8",
-	},
-	{
-		text: "GraphQL Typegen Documentation",
-		url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-		color: "#8954A8",
-	},
-]
-
 const badgeStyle = {
 	color: "#fff",
 	backgroundColor: "#088413",
@@ -90,7 +79,18 @@ const badgeStyle = {
 	marginLeft: 10,
 	lineHeight: 1,
 }
-
+const docLinks = [
+	{
+		text: "TypeScript Documentation",
+		url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
+		color: "#8954A8",
+	},
+	{
+		text: "GraphQL Typegen Documentation",
+		url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
+		color: "#8954A8",
+	},
+]
 const links = [
 	{
 		text: "Tutorial",
@@ -150,7 +150,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				</span>
 			</h1>
 			<LoginButton />
-			{isAuthenticated && <p>{`Hi ${user.email}`}</p>}
+			{isAuthenticated && <p>{`Hi ${user.name}`}</p>}
 			<p style={paragraphStyles}>
 				Edit <code style={codeStyles}>src/pages/index.tsx</code> to see
 				this page update in real-time. 😎
@@ -197,7 +197,6 @@ const IndexPage: React.FC<PageProps> = () => {
 		</main>
 	)
 }
-
 export default IndexPage
 
 export const Head: HeadFC = () => <title>Home Page</title>
