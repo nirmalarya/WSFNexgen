@@ -38,6 +38,7 @@ const config: GatsbyConfig = {
 				callback: process.env.AUTH0_CALLBACK,
 			},
 		},
+		// { resolve: "gatsby-source-drupal", options: {} },
 	],
 }
 
