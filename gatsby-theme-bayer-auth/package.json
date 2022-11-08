@@ -1,0 +1,25 @@
+{
+	"name": "gatsby-theme-bayer-auth",
+	"version": "1.0.0",
+	"description": "Gatsby theme integrating Bayer's authentication system.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "echo \"No build script setup\"",
+		"log": "alder --depth 2 --exclude='.vscode|.cache|node_modules|public'"
+	},
+	"keywords": [
+		"gatsby",
+		"gatsby-plugin"
+	],
+	"author": "Chris LaRocque <larocque.christopher@gmail.com>",
+	"license": "0BSD",
+	"peerDependencies": {
+		"gatsby": "^5.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"dependencies": {
+		"@auth0/auth0-react": "^1.12.0"
+	}
+}
