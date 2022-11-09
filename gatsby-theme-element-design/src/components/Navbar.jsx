@@ -10,6 +10,7 @@ export default function Navbar() {
 				width: "100%",
 				textAlign: "right",
 				fontFamily: "-apple-system, Roboto, sans-serif, serif",
+				padding: "1em",
 			}}
 		>
 			{" "}
